@@ -12,3 +12,26 @@ endpoint storage
 notifier
 
 will be using gorm
+
+users will have:
+  * Username
+  * Password
+  * Email to send password reset
+
+notifycalls will have:
+  * type (email, sms, http call)
+  * type value (mail address, sms number, http url)
+  * enabled (bool)
+
+notifiers will have:
+  * type (email, sms, url)
+  * type value (mail address, sms code, url)
+  * time period (minutes, hours, days, weeks, months, years)
+  * enabled bool
+  * notifycall (where to send notifications)
+  * last notification sent 
+  * notification timer start datetime
+
+notifylog:
+  * notifier
+  * datetime
