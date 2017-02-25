@@ -23,12 +23,12 @@ func main() {
 	defer db.Close()
 
 	db.AutoMigrate(&User{})
-	db.Create(&User{Username: "saint", Password: "test", Email: "saint@ghost.lt"})
+	db.Create(&User{Username: "test", Password: "test", Email: "test@test.lt"})
 
 	var user User
 	db.First(&user, 1)
-	db.First(&user, "username = ?", "saint")
-	db.Model(&user).Update("Username", "saint1")
+	db.First(&user, "username = ?", "test")
+	db.Model(&user).Update("Username", "test")
 	fmt.Println(user)
 	db.Delete(&user)
 }
