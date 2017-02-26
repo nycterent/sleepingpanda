@@ -11,7 +11,7 @@ endpoint configuration
 endpoint storage
 notifier
 
-will be using gorm
+will be using gorm and some web framework
 
 users will have:
   * Username
@@ -29,7 +29,7 @@ notifiers will have:
   * time period (minutes, hours, days, weeks, months, years)
   * enabled bool
   * notifycall (where to send notifications)
-  * last notification sent 
+  * last notification sent
   * notification timer start datetime
 
 notifylog:
